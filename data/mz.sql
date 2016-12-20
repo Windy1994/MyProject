@@ -1,0 +1,183 @@
+﻿SET NAMES UTF8;
+DROP DATABASE IF EXISTS mz;
+CREATE DATABASE mz CHARSET=UTF8;
+USE mz;
+CREATE TABLE m_user(
+    uid INT PRIMARY KEY AUTO_INCREMENT,
+    uphone VARCHAR(20),
+    upwd VARCHAR(20)
+);
+CREATE TABLE m_navbar_product(
+    pid INT PRIMARY KEY AUTO_INCREMENT,
+    pname VARCHAR(30),
+    pic VARCHAR(30),
+    ptype INT
+);
+INSERT INTO m_navbar_product VALUES
+(NULL,'PRO6s','img/1.png',1),
+(NULL,'MX6','img/2.png',1),
+(NULL,'PRO6','img/3.png',1),
+(NULL,'魅蓝U20','img/6.png',2),
+(NULL,'魅蓝U10','img/6.png',2),
+(NULL,'PRO5','img/4.png',1),
+(NULL,'MX5','img/5.png',1),
+(NULL,'魅蓝5','img/6.png',2),
+(NULL,'魅蓝MAX','img/6.png',2),
+(NULL,'魅蓝E','img/6.png',2),
+(NULL,'魅蓝3S','img/6.png',2),
+(NULL,'EP2X','img/7.png',3),
+(NULL,'EP51','img/8.png',3),
+(NULL,'HD50','img/7.png',3),
+(NULL,'EP51','img/8.png',3),
+(NULL,'智能手表MIX','img/13.png',4),
+(NULL,'魅族双肩包','img/12.png',4),
+(NULL,'智能手表MIX','img/13.png',4),
+(NULL,'魅族双肩包','img/12.png',4);
+CREATE TABLE m_s_product_list(
+    pid INT PRIMARY KEY AUTO_INCREMENT,
+    pname VARCHAR(30),
+    pic VARCHAR(30),
+    price INT,
+    ptype INT
+);
+INSERT INTO m_s_product_list VALUES
+(NULL,'魅族PRO 6 Plus','img/s_t_1.png',2999,1),
+(NULL,'魅族PRO 6S','img/s_t_2.png',2699,1),
+(NULL,'魅族PRO 6','img/s_t_3.png',2299,1),
+(NULL,'魅族PRO 5','img/s_t_4.png',2199,1),
+(NULL,'魅蓝 X','img/s_t_5.png',1699,2),
+(NULL,'魅蓝5 圣诞套装','img/s_t_6.png',788,2),
+(NULL,'魅蓝 U10','img/s_t_7.png',999,2),
+(NULL,'魅蓝 U20','img/s_t_8.png',1099,2),
+(NULL,'魅蓝 E','img/s_t_9.png',1299,2),
+(NULL,'魅蓝 3S','img/s_t_10.png',699,2),
+(NULL,'魅族MX6','img/s_t_11.png',1799,3),
+(NULL,'魅族MX5','img/s_t_12.png',999,3),
+(NULL,'魅族MX6','img/s_t_11.png',1799,3),
+(NULL,'魅族MX5e 经典版','img/s_t_13.png',999,3),
+(NULL,'魅族MX5','img/s_t_12.png',999,3),
+(NULL,'魅族 EP51蓝牙运动耳机','img/s_t_14.png',269,4),
+(NULL,'魅族 HD50头戴式耳机','img/s_t_15.png',399,4),
+(NULL,'魅族 休闲旅行双肩包','img/s_t_16.png',199,4),
+(NULL,'魅族 移动电源(标准版)','img/s_t_17.png',99,4),
+(NULL,'魅族 Lifeme BTS30 蓝牙音箱','img/s_t_18.png',399,4),
+(NULL,'魅族 路由器 挤塑板','img/s_t_19.jpg',199,5),
+(NULL,'航嘉智慧云防雷pro3s-wifi','img/s_t_20.png',112,5),
+(NULL,'罗马仕AC10快充适配器','img/s_t_21.png',35.9,5),
+(NULL,'魅航智能行车记录仪MC6','img/s_t_22.png',399,5),
+(NULL,'南山大高仿真颈舒按摩仪','img/s_t_23.png',369,5),
+(NULL,'Moikit麦开智能水杯','img/s_t_24.png',299,5);
+CREATE TABLE m_s_navlist(
+    pid INT PRIMARY KEY AUTO_INCREMENT,
+    pname VARCHAR(30),
+    pic VARCHAR(30),
+    ptype INT
+);
+INSERT INTO m_s_navlist VALUES
+(NULL,'魅族PRO 6 Plus','img/s_t_1.png',1),
+(NULL,'魅族PRO 6S','img/s_t_2.png',1),
+(NULL,'魅族PRO 6','img/s_t_3.png',1),
+(NULL,'魅族PRO 5','img/s_t_4.png',1),
+(NULL,'魅蓝 X','img/s_t_5.png',1),
+(NULL,'魅蓝5 圣诞套装','img/s_t_6.png',1),
+(NULL,'魅蓝 U10','img/s_t_7.png',1),
+(NULL,'魅蓝 U20','img/s_t_8.png',1),
+(NULL,'魅蓝 E','img/s_t_9.png',1),
+(NULL,'魅蓝 3S','img/s_t_10.png',1),
+(NULL,'魅族MX6','img/s_t_11.png',1),
+(NULL,'魅族MX5','img/s_t_12.png',1),
+(NULL,'魅族MX6','img/s_t_11.png',1),
+(NULL,'魅族MX5e 经典版','img/s_t_13.png',1),
+(NULL,'魅族MX5','img/s_t_12.png',1),
+(NULL,'智能机器人','img/s_p_1.png',2),
+(NULL,'新游手柄','img/s_p_2.png',2),
+(NULL,'乐范魔力贴','img/s_P_3.png',2),
+(NULL,'电动升降办公桌','img/s_p_4.png',2),
+(NULL,'魅族 EP51蓝牙运动耳机','img/s_t_14.png',3),
+(NULL,'魅族 Lifeme BTS30 蓝牙音箱','img/s_t_18.png',3),
+(NULL,'魅族 HD50头戴式耳机','img/s_t_15.png',3),
+(NULL,'魅族 路由器 挤塑板','img/s_t_19.jpg',4),
+(NULL,'魅族 移动电源(标准版)','img/s_t_17.png',4),
+(NULL,'罗马仕AC10快充适配器','img/s_t_21.png',4),
+(NULL,'PRO6S环窗智能保护套','img/s_t_21.png',5),
+(NULL,'PRO智能保护套','img/s_p_4.png',5),
+(NULL,'PRO6S音乐智能保护套','img/s_p_5.png',5),
+(NULL,'魅蓝E高透保护膜','img/s_p_6.png',5),
+(NULL,'魅蓝3S高透保护膜','img/s_p_7.png',5),
+(NULL,'魅蓝E高透保护膜','img/s_p_8.png',5),
+(NULL,'魅蓝E纤格纹保护壳','img/s_p_9.png',5),
+(NULL,'魅蓝MAX保护壳','img/s_p_10.png',5),
+(NULL,'魅族二合一金属数据线','img/s_p_11.png',6),
+(NULL,'魅族MicroUSB数据线','img/s_p_12.png',6),
+(NULL,'魅族MicroUSB金属数据线','img/s_p_13.png',6),
+(NULL,'魅族Type-C金属数据线','img/s_p_14.png',6),
+(NULL,'魅族Type-C转接头','img/s_p_15.png',6),
+(NULL,'罗马仕AC10快充适配器','img/s_p_16.png',6),
+(NULL,'电源适配器','img/s_p_17.png',6),
+(NULL,'猎奇(LIEQI)手机镜头','img/s_p_18.png',7),
+(NULL,'航嘉雷盾独控开关','img/s_p_19.png',7),
+(NULL,'东芝V8 移动硬盘','img/s_p_20.png',7),
+(NULL,'魅族豌豆钥匙包','img/s_p_21.png',7);
+CREATE TABLE store_all_product(
+    pid INT PRIMARY KEY AUTO_INCREMENT,
+    pname VARCHAR(30),
+    gift VARCHAR(30),
+    price FLOAT(6,2),
+    pic VARCHAR(60),
+    ptype INT,
+    color VARCHAR(10),
+    package VARCHAR(10),
+    bigpic VARCHAR(60),
+    network VARCHAR(20),
+    capacity VARCHAR(20)
+);
+INSERT INTO store_all_product VALUES
+(NULL,'魅族PRO 6 Plus','12月9日10:00 限量开售',2999,'img/phone_2.png',1,"香槟金","",'img/phone_big_2.jpg',"公开版","64GB"),
+(NULL,'魅蓝 3s','赠EP-21HD耳机',699,'img/phone_3.png',1,"银色","官方标配",'img/phone_big_3.jpg',"移动定制版","16GB"),
+(NULL,'魅蓝 NOote3','12月9日10:00 限量开售',799,'img/phone_4.png',1,"银色","",'img/phone_big_4.jpg',"全网通电信版","16GB"),
+(NULL,'魅蓝5 圣诞套装','喊魅族EP-21HD耳机',788,'img/phone_5.png',1,"冰河白","圣诞套装 89元",'img/phone_big_5.jpg',"全网通公开版","32GB"),
+(NULL,'魅蓝 E','限量赠送环窗智能保护套',1299,'img/phone_6.png',1,"冰川蓝","魅力卡套餐 0元",'img/phone_big_6.jpg',"全网通公开版","32GB"),
+(NULL,'魅蓝 U20','双曲面玻璃 3260mAh电池',1099,'img/phone_7.png',1,"星空黑","官方标配",'img/phone_big_7.jpg',"全网通公开版","16GB"),
+(NULL,'魅蓝 metal','领券立减200元',999,'img/phone_8.png',1,"白色","官方标配",'img/phone_big_8.jpg',"公开版","32GB"),
+(NULL,'魅族 MX6','曾标准版移动电源',1799,'img/phone_9.png',1,"玫瑰金","魅力卡套餐 0元",'img/phone_big_9.jpg',"全网通公开版","3GB+32GB"),
+(NULL,'魅族PRO 6','3D Press感知屏 十核全网通',2299,'img/phone_10.png',1,"香槟金","官方标配",'img/phone_big_10.jpg',"全网通公开版","32GB"),
+(NULL,'魅族 EP51蓝牙运动耳机','轻装上阵 乐享动听',269,'img/parts_2.png',2,"红黑","",'img/parts_big_2.jpg',"",""),
+(NULL,'先锋SEC-CL31 HIFI入耳式耳机','个性三角腔体设计 佩戴舒适 防缠绕 无线控',69,'img/parts_3.png',2,"金色","",'img/parts_big_3.jpg',"",""),
+(NULL,'先锋SE-MJ512 头戴式耳机','便携可折叠 轻巧机身',99,'img/parts_4.png',2,"白色","",'img/parts_big_4.jpg',"",""),
+(NULL,'Skullcandy 英雄联盟定制款','英雄联盟特别定制款头戴式',299,'img/parts_5.png',2,"LOL定制款","",'img/parts_big_5.jpg',"",""),
+(NULL,'昱科Touro Mobile 移动硬盘','轻薄小巧 高速稳定',309,'img/parts_6.png',2,"黑色","",'img/parts_big_6.jpg',"","500G"),
+(NULL,'铁三角 -CK323IS','老铁超值入门塞，带麦通话',128,'img/parts_7.png',2,"黄色","",'img/parts_big_7.jpg',"",""),
+(NULL,'铁三角Audio Technica ATH-MSR7','铁家40年扛鼎之作，陌生人妻的诱惑',1480,'img/parts_8.png',2,"黑色","",'img/parts_big_8.jpg',"",""),
+(NULL,'Beats Urbeats 入耳耳机','强韧经久 声而震撼',558,'img/parts_9.png',2,"灰色","",'img/parts_big_9.jpg',"",""),
+(NULL,'JBL GO音乐金砖 无线蓝牙音响','将音乐进行到底',299,'img/parts_10.png',2,"蓝色","",'img/parts_big_8.jpg',"",""),
+(NULL,'古姿智能肌肤测试喷雾仪小Q','智能肌肤检测 手机充电宝',299,'img/hardware_2.png',3,"白色","",'img/hardware_big_2.jpg',"",""),
+(NULL,'魅族路由器 极速版','天生不凡 快狠稳',199,'img/hardware_3.jpg',3,"白色","",'img/hardware_big_3.jpg',"",""),
+(NULL,'暴风魔镜 5代安卓 VR眼镜','轴陀螺仪、电容触控',349,'img/hardware_4.png',3,"黑白","",'img/hardware_big_4.jpg',"",""),
+(NULL,'CILINE-沁麟2.5L智能靠谱煲','智能便携 三层饭菜汤',299,'img/hardware_5.png',3,"银色","",'img/hardware_big_5.jpg',"",""),
+(NULL,'乐心运动手环mambo 微信互联','来电提醒 智能闹钟 睡眠监测',99,'img/hardware_6.png',3,"黑色","",'img/hardware_big_6.jpg','',''),
+(NULL,'极路客G1 智能行车记录仪','精彩抓拍、一键分享、随时直播',299,'img/hardware_7.png',3,"磨砂黑","",'img/hardware_big_7.jpg',"",""),
+(NULL,'DJI大疆精灵P3S航拍器无人机','新手入门力荐',2999,'img/hardware_8.png',3,"银色","",'img/hardware_big_8.jpg',"",""),
+(NULL,'魅族-轻智能手表mix','轻奢如我，个性使然',999,'img/hardware_9.png',3,"蓝白","",'img/hardware_big_9.jpg',"",""),
+(NULL,'极米Z4X 3D高清无线无屏电视','支持花呗分期 月供低至252元',2699,'img/hardware_10.png',3,"白色","官方标配",'img/hardware_big_10.jpg',"",""),
+(NULL,'魅族二合一金属数据线','二合一 全兼容',49,'img/periphery_2.png',4,"银色","",'img/periphery_big_2.jpg',"",""),
+(NULL,'魅蓝5 智能保护壳','清新亮丽 原质原味',59,'img/periphery_3.png',4,"黄色","",'img/periphery_big_3.jpg',"",""),
+(NULL,'魅蓝5 高透保护膜','高清透亮 抗刮耐磨',29,'img/periphery_4.png',4,"透明","",'img/periphery_big_4.jpg',"",""),
+(NULL,'PRO 6 环窗智能保护套','个性表盘 随心搭配',99,'img/periphery_5.png',4,"土豪金","",'img/periphery_big_5.jpg',"",""),
+(NULL,'魅蓝 E 环窗智能保护套','个性表盘 随心搭配',99,'img/periphery_6.png',4,"土豪金","",'img/periphery_big_6.jpg',"",""),
+(NULL,'PRO 6s 环窗智能保护套','环窗操作 便捷高效',99,'img/periphery_7.png',4,"磨砂黑","",'img/periphery_big_7.jpg',"",""),
+(NULL,'MX6 轻薄保护壳','薄中带韧 纤巧依旧',49,'img/periphery_8.png',4,"白色","",'img/periphery_big_8.jpg',"",""),
+(NULL,'魅蓝 E 纤格纹保护壳','双触感  周全保护',59,'img/periphery_9.png',4,"黑色","",'img/periphery_big_9.jpg',"",""),
+(NULL,'MX6 环窗智能保护套','个性表盘 随心搭配',99,'img/periphery_10.png',4,"白色","套餐一",'img/periphery_big_10.jpg',"","");
+CREATE TABLE m_cart(
+    cid INT PRIMARY KEY AUTO_INCREMENT,
+    userId INT
+);
+INSERT INTO m_cart VALUES(100,1);
+CREATE TABLE m_cart_detail(
+    did INT PRIMARY KEY AUTO_INCREMENT,
+    cartId INT,
+    productId INT,
+    orderTime BIGINT,
+    orderNumber BIGINT
+);
+SELECT * FROM m_navbar_product;
